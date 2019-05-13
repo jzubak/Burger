@@ -50,7 +50,7 @@ update: function(table, objColVals, condition, cb){
     var queryUpdate = "update " + table;
 
     queryUpdate += " set ";
-    queryUpdate += objToSql(objColVals);
+    queryUpdate += objColVals;
     queryUpdate += " where ";
     queryUpdate += condition;
 

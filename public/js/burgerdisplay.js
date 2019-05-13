@@ -5,6 +5,7 @@ $(function () {
         var neweaten = $(this).data("neweaten");
 
         var newDevoured = {
+         
             devoured: neweaten
         };
 
@@ -26,8 +27,8 @@ $(function () {
         event.preventDefault();
 
         var newBurger = {
-            name: $("#nom").val().trim(),
-            devour: $("[name=devoured]:checked").val().trim()
+            burger_name: $("#nom").val(),
+            devoured: $("[name=devoured]:checked").val()
         };
 
         // Send the POST request.
