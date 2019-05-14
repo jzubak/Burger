@@ -7,7 +7,7 @@
     {{#unless devoured}}
     <li>{{burger_name}}
       	<button class="devoured" data-devoured="{{devoured}}" data-id="{{id}}">EAT ME!
-          {{!-- data-newDevoured=""="{{devoured}}"> --}}
+          {{!-- this was my attempt at using partials it didn't work data-newDevoured=""="{{devoured}}"> --}}
 		{{!-- {{#if devoured}}EAT ME!{{else}}WASN'T THAT YUMMY!{{/if}} --}}
 	</button>
 
@@ -25,7 +25,7 @@
   {{#each burgers}}
   {{#if devoured}}
     <li>
-        {{!-- {{> burgers/burger-block devoured=true}} --}}
+        {{!--this was my attempt at using partials it didn't work {{> burgers/burger-block devoured=true}} --}}
         {{burger_name}}
       	<button class="devoured" data-devoured="{{devoured}}" data-id="{{id}}">Wasn't That Yummy?
 	</button>
@@ -40,12 +40,6 @@
     <label for="nom">Burger Name:</label>
     <input type="text" id="nom" name="name">
   </div>
-
-  {{!-- <div class="form-group">
-    <label for="eat">Devour?!?</label><br>
-    <input type="radio" name="eat" value="1" checked> Devour!<br>
-    <input type="radio" name="eat" value="0"> EATEN
-  </div> --}}
 
   <button type="submit">Add Burger</button>
 </form>
