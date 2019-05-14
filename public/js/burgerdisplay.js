@@ -2,11 +2,14 @@
 $(function () {
     $(".devoured").on("click", function (event) {
         var id = $(this).data("id");
-        var neweaten = $(this).data("neweaten");
-
+        if ($(this).data("devoured") === 0){
+           var devoured = true
+        }else devoured = false
+        // var devoured = $(this).data("devoured");
+        console.log(devoured);
+        console.log(id);
         var newDevoured = {
-         
-            devoured: neweaten
+            devoured: devoured
         };
 
         // Send the PUT request.
@@ -15,7 +18,7 @@ $(function () {
             data: newDevoured
         }).then(
             function () {
-                console.log("changed devoured status to ", neweaten);
+                console.log("changed devoured status to ", devoured);
                 // Reload the page to get the updated list
                 location.reload();
             }

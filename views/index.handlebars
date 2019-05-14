@@ -6,7 +6,7 @@
   {{#each burgers}}
     {{#unless devoured}}
     <li>{{burger_name}}
-      	<button class="devoured" data-id="{{id}}">EAT ME!
+      	<button class="devoured" data-devoured="{{devoured}}" data-id="{{id}}">EAT ME!
           {{!-- data-newDevoured=""="{{devoured}}"> --}}
 		{{!-- {{#if devoured}}EAT ME!{{else}}WASN'T THAT YUMMY!{{/if}} --}}
 	</button>
